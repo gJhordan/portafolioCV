@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.7s ease-in-out forwards;
+  }
+:root {
+    /* Colores */
+    --color-primary: #007acc;       /* Azul principal */
+    --color-secondary: #00a651;     /* Verde secundario */
+    --color-accent: #00bcd4;        /* Azul claro */
+    --color-background: #ffffff;     /* Fondo blanco */
+    --color-background-alt: #f0f4f8; /* Fondo alternativo suave */
+    --color-text: #0b090a;          /* Texto oscuro */
+    --color-textbutton: #ffffff;    /* Texto de botón blanco */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Colores y variables para el modo oscuro */
+.dark {
+    /* Colores */
+    --color-primary: #005b99;       /* Azul oscuro */
+    --color-secondary: #007d33;     /* Verde oscuro */
+    --color-accent: #0097a7;        /* Azul teal */
+    --color-background-alt: #26272c; /* Fondo oscuro */
+    --color-background: #161a1d;     /* Fondo más oscuro */
+    --color-text: #e0f7fa;           /* Texto claro */
+    --color-textbutton: #ffffff;     /* Texto de botón blanco */
 }
